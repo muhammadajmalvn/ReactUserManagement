@@ -1,5 +1,5 @@
 const userSchema = require("../../models/userSchema");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const generateToken = require("../../utils/generatetoken");
 const { response } = require("express");
 
@@ -48,8 +48,8 @@ exports.loginPost = async (req, res) => {
 exports.addPhoto = async (req, res) => {
   let id = req.query.id;
   let pic = req.body.photo;
-  console.log(id + "THIS IS THE PHOYO");
-  console.log("TJHO O _ JAFDKAJSFHD FJLKLJKDSHF KHFJKLSDH FJSKDHF ");
+  console.log(id + "THIS IS THE PHOTO");
+  console.log("QWERTYUIOP");
   console.log(pic);
 
   try {
@@ -57,7 +57,7 @@ exports.addPhoto = async (req, res) => {
       .updateOne({ _id: id }, { $set: { photo: pic } })
       .then((data) => {
         console.log(data);
-        console.log("THIS IS DATA");
+        console.log("THIS IS OUR DATA");
         res.status(200).json("PHOTO IS UPDATED");
       })
       .catch((err) => {

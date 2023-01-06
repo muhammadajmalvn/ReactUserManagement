@@ -1,5 +1,5 @@
 const userSchema = require("../../models/userSchema")
-const bcrypt = require("bcrypt")
+const bcrypt = require("bcryptjs")
 const generateToken = require("../../utils/generatetoken")
 
 exports.SignUpPost = async(req,res)=>{

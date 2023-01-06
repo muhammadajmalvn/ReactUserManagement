@@ -1,6 +1,6 @@
 const adminSchema = require("../../models/adminSchema");
 const userSchema = require("../../models/userSchema");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const generateToken = require("../../utils/generatetoken");
 
 exports.adminloginpost = async (req, res) => {
@@ -26,7 +26,7 @@ exports.adminloginpost = async (req, res) => {
 };
 
 exports.adminHome = async (req, res) => {
-  console.log("HEHEH");
+  console.log("HELLLLLLLLLLLLLLLLLLLLLLLLOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
   userSchema.find().then((data) => {
     res.status(200).json(data);
   });
